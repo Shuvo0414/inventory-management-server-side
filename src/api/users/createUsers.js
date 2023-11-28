@@ -14,7 +14,7 @@ const updateUserWithShopInfo = async (req, res) => {
     const query = { email: email };
     const options = { upsert: true, new: true, setDefaultsOnInsert: true };
 
-    // Use the `findOneAndUpdate` method to either create or update the user
+    // Use the findOneAndUpdate method to either create or update the user
     const result = await User.findOneAndUpdate(query, userData, options);
 
     res.send({ message: "User updated with shop info", user: result });
