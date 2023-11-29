@@ -10,6 +10,8 @@ const authRoutes = require("./routes/v1/authentication");
 const shopRoutes = require("./routes/v1/shop");
 const usersRoutes = require("./routes/v1/users");
 const productRoutes = require("./routes/v1/Product");
+const checkOutRoutes = require("./routes/v1/check-out");
+const salesCollectionRoutes = require("./routes/v1/salesCollection");
 
 applyMiddleware(app);
 
@@ -18,6 +20,8 @@ app.use(authRoutes);
 app.use(shopRoutes);
 app.use(usersRoutes);
 app.use(productRoutes);
+app.use(checkOutRoutes);
+app.use(salesCollectionRoutes);
 
 // Handle root URL
 app.get("/", (req, res) => {

@@ -2,7 +2,11 @@ const User = require("../../models/users");
 
 const updateUserWithShopInfo = async (req, res) => {
   try {
+    console.log("Request params:", req.params);
+
     const email = req.params.email;
+    console.log("Email:", email);
+
     const userData = {
       name: req.body.name,
       role: req.body.role,
