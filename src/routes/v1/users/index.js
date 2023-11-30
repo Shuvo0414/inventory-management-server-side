@@ -5,7 +5,7 @@ const verifyToken = require("../../../middlewares/verifyToken");
 
 const router = require("express").Router();
 
-router.put("/users/:email", verifyToken, updateUserWithShopInfo);
+router.put("/users/:email", updateUserWithShopInfo);
 router.get("/users/admin/:email", getUserRoleByAdmin);
 router.get("/users/maneger/:email", getUserRoleByManeger);
 module.exports = router;
