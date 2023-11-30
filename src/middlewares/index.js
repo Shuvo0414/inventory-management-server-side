@@ -7,7 +7,10 @@ const applyMiddleware = (app) => {
   // middleware
   app.use(
     cors({
-      origin: [LOCAL_CLIENT, CLIENT],
+      origin: [
+        "https://fabulous-vacherin-c5fc87.netlify.app",
+        "http://localhost:5173",
+      ],
       credentials: true,
     })
   );
