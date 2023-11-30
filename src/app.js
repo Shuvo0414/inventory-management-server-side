@@ -12,6 +12,7 @@ const usersRoutes = require("./routes/v1/users");
 const productRoutes = require("./routes/v1/Product");
 const checkOutRoutes = require("./routes/v1/check-out");
 const salesCollectionRoutes = require("./routes/v1/salesCollection");
+const stripeRoutes = require("./routes/v1/stripe");
 
 applyMiddleware(app);
 
@@ -22,6 +23,7 @@ app.use(usersRoutes);
 app.use(productRoutes);
 app.use(checkOutRoutes);
 app.use(salesCollectionRoutes);
+app.use("/stripe", stripeRoutes);
 
 // Handle root URL
 app.get("/", (req, res) => {
