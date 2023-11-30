@@ -40,11 +40,13 @@ app.all("*", (req, res, next) => {
 // Error handling middleware
 app.use(globalErrorHandler);
 
-const main = async () => {
-  await connectDB();
-  app.listen(port, () => {
-    console.log(`inventoryManagement running on the port ${port}`);
-  });
-};
+// const main = async () => {
+//   await connectDB();
+//   app.listen(port, () => {
+//     console.log(`inventoryManagement running on the port ${port}`);
+//   });
+// };
 
-main();
+// main();
+
+module.exports = app;
